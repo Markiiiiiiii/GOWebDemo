@@ -1,0 +1,6 @@
+<h1>this golang</h1>
+<img src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3166639134,1440270722&fm=26&gp=0.jpg'>
+<button id='b1'>点击</button>
+<script>
+document.
+</script>

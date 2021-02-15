@@ -2,11 +2,14 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"net/http"
 )
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "<h1>hello is go web test</h1>")
+	b, _ := ioutil.ReadFile("./hello.txt")
+	// fmt.Fprintln(w, "<h1>hello is go web test</h1>")
+	fmt.Fprintln(w, string(b))
 }
 
 func main() {
