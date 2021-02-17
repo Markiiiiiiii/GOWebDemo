@@ -31,9 +31,15 @@ func main() {
 			"Age":    25,
 			"Gender": "女",
 		}
+		hobbyList := []string{
+			"lan",
+			"fott",
+			"bakkk",
+		}
 		err = t.Execute(w, map[string]interface{}{
 			"user": user,
 			"m1":   m1,
+			"hobb": hobbyList,
 		})
 		if err != nil {
 			fmt.Println("execute faild,err:", err)

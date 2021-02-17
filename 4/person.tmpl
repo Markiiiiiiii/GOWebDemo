@@ -16,5 +16,33 @@
     <p>Name: {{.m1.Name}}</p>
     <p>Age: {{.m1.Age}}</p>
     <p>gender: {{.m1.Gender}}</p>
+    <br>
+    {{$v1:=100}}
+    {{if $v1}}
+    {{$v1}}
+    {{else}}
+    没有任何的输出
+    {{end}}
+    <br>
+    {{if lt .m1.Age 22}}
+    ddd
+    {{else}}
+    fff
+    {{end}}
+    <br>
+    {{range $index,$hob:=.hobb}}
+        <p> {{$index}}---{{$hob}}</p>
+    {{else}}
+        nothing
+    {{end}}
+
+
+    {{with .m1}}
+    <p>{{.Name}}</p>
+    <p>{{.Age}}</p>
+    {{end}}
+
+
+    {{index .hobb 2}}
 </body>
 </html>
