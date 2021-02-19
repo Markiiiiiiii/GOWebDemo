@@ -29,5 +29,12 @@ func main() {
 			"title": "<a href='http://www.baidu.com'>baidu</a>",
 		})
 	})
+
+	//返回从网上下载的模板
+
+	r.GET("/home", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "home.html", nil)
+	})
+
 	r.Run(":9000")
 }
