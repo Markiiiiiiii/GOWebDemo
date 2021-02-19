@@ -9,6 +9,8 @@ import (
 
 func main() {
 	r := gin.Default()
+	//加载静态文件
+	r.Static("./xxx", "./statics")
 	r.SetFuncMap(template.FuncMap{
 		"safe": func(str string) template.HTML {
 			return template.HTML(str)
@@ -24,7 +26,7 @@ func main() {
 	})
 	r.GET("/user/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "user/index.tmpl", gin.H{ //模板渲染
-			"title": "<a herf='http://www.baidu.com'>baidu</a>",
+			"title": "<a href='http://www.baidu.com'>baidu</a>",
 		})
 	})
 	r.Run(":9000")
