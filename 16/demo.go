@@ -47,6 +47,13 @@ func main() {
 				"method": "post",
 			})
 		})
+		//路由组嵌套
+		xx := vidioGroup.Group("/xx")
+		xx.POST("/index", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"method": "post",
+			})
+		})
 	}
 
 	r.Run(":9000")
